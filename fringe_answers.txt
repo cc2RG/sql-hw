@@ -1,0 +1,35 @@
+1. _______________________________________________________________________
+
+
+SELECT name FROM users;
+
+SELECT name FROM shows WHERE price < 15;
+
+INSERT INTO "users" (name) VALUES ('Val Gibson');
+
+SELECT id FROM users WHERE name = 'Ross Galloway';
+
+INSERT INTO "shows_users" (show_id, user_id) VALUES (13, 23);
+
+UPDATE users SET name='Valerie Gibson' WHERE name='Val Gibson';
+
+DELETE FROM users WHERE name='Valerie Gibson';
+
+DELETE FROM shows_users WHERE user_id=23;
+
+
+2._______________________________________________________________________
+
+
+SELECT name, price FROM shows ORDER BY price ASC;
+
+SELECT AVG(price) FROM shows;
+
+SELECT MIN(price) FROM shows;
+
+SELECT SUM(price) FROM shows;
+
+SELECT SUM(price) FROM shows WHERE price < 20;
+
+SELECT name, price FROM shows WHERE price IN (SELECT MAX(price) from shows);
+
